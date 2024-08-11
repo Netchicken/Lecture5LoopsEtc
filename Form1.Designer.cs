@@ -35,6 +35,7 @@
             lbxLoop = new ListBox();
             label1 = new Label();
             label2 = new Label();
+            btnDoWhile = new Button();
             SuspendLayout();
             // 
             // btnWhileLoop
@@ -96,12 +97,23 @@
             label2.TabIndex = 6;
             label2.Text = "Data 2";
             // 
+            // btnDoWhile
+            // 
+            btnDoWhile.Location = new Point(12, 72);
+            btnDoWhile.Name = "btnDoWhile";
+            btnDoWhile.Size = new Size(76, 41);
+            btnDoWhile.TabIndex = 7;
+            btnDoWhile.Text = "Do While Loop";
+            btnDoWhile.UseVisualStyleBackColor = true;
+            btnDoWhile.Click += btnDoWhile_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDoWhile);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lbxLoop);
@@ -124,5 +136,6 @@
         private ListBox lbxLoop;
         private Label label1;
         private Label label2;
+        private Button btnDoWhile;
     }
 }
