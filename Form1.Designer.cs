@@ -31,11 +31,12 @@
             btnWhileLoop = new Button();
             txtData1 = new TextBox();
             txtData2 = new TextBox();
-            lblWhileOutput = new Label();
             lbxLoop = new ListBox();
             label1 = new Label();
             label2 = new Label();
             btnDoWhile = new Button();
+            btnRandom = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnWhileLoop
@@ -62,22 +63,15 @@
             txtData2.Size = new Size(100, 23);
             txtData2.TabIndex = 2;
             // 
-            // lblWhileOutput
-            // 
-            lblWhileOutput.Location = new Point(123, 254);
-            lblWhileOutput.Name = "lblWhileOutput";
-            lblWhileOutput.Size = new Size(137, 28);
-            lblWhileOutput.TabIndex = 3;
-            lblWhileOutput.Text = "label1";
-            // 
             // lbxLoop
             // 
             lbxLoop.FormattingEnabled = true;
             lbxLoop.ItemHeight = 15;
             lbxLoop.Location = new Point(118, 53);
             lbxLoop.Name = "lbxLoop";
-            lbxLoop.Size = new Size(206, 154);
+            lbxLoop.Size = new Size(396, 379);
             lbxLoop.TabIndex = 4;
+            lbxLoop.SelectedIndexChanged += lbxLoop_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -107,17 +101,38 @@
             btnDoWhile.UseVisualStyleBackColor = true;
             btnDoWhile.Click += btnDoWhile_Click;
             // 
+            // btnRandom
+            // 
+            btnRandom.Location = new Point(13, 128);
+            btnRandom.Name = "btnRandom";
+            btnRandom.Size = new Size(75, 61);
+            btnRandom.TabIndex = 8;
+            btnRandom.Text = "While Random Number";
+            btnRandom.UseVisualStyleBackColor = true;
+            btnRandom.Click += btnRandom_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(12, 195);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 68);
+            button1.TabIndex = 9;
+            button1.Text = "Do Random Number";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(btnRandom);
             Controls.Add(btnDoWhile);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lbxLoop);
-            Controls.Add(lblWhileOutput);
             Controls.Add(txtData2);
             Controls.Add(txtData1);
             Controls.Add(btnWhileLoop);
@@ -132,10 +147,11 @@
         private Button btnWhileLoop;
         private TextBox txtData1;
         private TextBox txtData2;
-        private Label lblWhileOutput;
         private ListBox lbxLoop;
         private Label label1;
         private Label label2;
         private Button btnDoWhile;
+        private Button btnRandom;
+        private Button button1;
     }
 }
