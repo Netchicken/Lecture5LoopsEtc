@@ -37,11 +37,14 @@
             btnDoWhile = new Button();
             btnRandom = new Button();
             button1 = new Button();
+            btnForLoop = new Button();
+            btnWritetofile = new Button();
+            btnAppendtext = new Button();
             SuspendLayout();
             // 
             // btnWhileLoop
             // 
-            btnWhileLoop.Location = new Point(12, 24);
+            btnWhileLoop.Location = new Point(13, 43);
             btnWhileLoop.Name = "btnWhileLoop";
             btnWhileLoop.Size = new Size(75, 23);
             btnWhileLoop.TabIndex = 0;
@@ -121,12 +124,45 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // btnForLoop
+            // 
+            btnForLoop.Location = new Point(13, 269);
+            btnForLoop.Name = "btnForLoop";
+            btnForLoop.Size = new Size(74, 48);
+            btnForLoop.TabIndex = 10;
+            btnForLoop.Text = "For Loop";
+            btnForLoop.UseVisualStyleBackColor = true;
+            btnForLoop.Click += btnForLoop_Click;
+            // 
+            // btnWritetofile
+            // 
+            btnWritetofile.Location = new Point(549, 53);
+            btnWritetofile.Name = "btnWritetofile";
+            btnWritetofile.Size = new Size(96, 48);
+            btnWritetofile.TabIndex = 11;
+            btnWritetofile.Text = "Write to File";
+            btnWritetofile.UseVisualStyleBackColor = true;
+            btnWritetofile.Click += btnWritetofile_Click;
+            // 
+            // btnAppendtext
+            // 
+            btnAppendtext.Location = new Point(549, 124);
+            btnAppendtext.Name = "btnAppendtext";
+            btnAppendtext.Size = new Size(98, 45);
+            btnAppendtext.TabIndex = 12;
+            btnAppendtext.Text = "Add text to file";
+            btnAppendtext.UseVisualStyleBackColor = true;
+            btnAppendtext.Click += btnAppendtext_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnAppendtext);
+            Controls.Add(btnWritetofile);
+            Controls.Add(btnForLoop);
             Controls.Add(button1);
             Controls.Add(btnRandom);
             Controls.Add(btnDoWhile);
@@ -153,5 +189,8 @@
         private Button btnDoWhile;
         private Button btnRandom;
         private Button button1;
+        private Button btnForLoop;
+        private Button btnWritetofile;
+        private Button btnAppendtext;
     }
 }

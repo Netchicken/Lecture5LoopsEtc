@@ -1,5 +1,7 @@
 using System.Diagnostics.Metrics;
 
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace Lecture5LoopsEtc
 {
     public partial class Form1 : Form
@@ -109,6 +111,57 @@ namespace Lecture5LoopsEtc
             } while (rand != data1);
             lbxLoop.Items.Add("D TimesTable " + data1 + " count " + count);
 
+        }
+
+        private void btnForLoop_Click(object sender, EventArgs e)
+        {
+            //get the data from the text box using in.tryParse
+            int data1 = 0;
+            int.TryParse(txtData1.Text, out data1);
+            int count = 0;
+
+
+            for (int i = 0; i <= data1; i++)
+            {
+                lbxLoop.Items.Add(" the i counter = " + i + " the match to stop " + data1);
+
+            }
+
+
+        }
+
+        private void btnWritetofile_Click(object sender, EventArgs e)
+        {
+            //what is the name of your file
+            string filePath = "file.txt";
+            //get some data from a textbox
+            string data1 = txtData1.Text;
+
+            // Create a StreamWriter instance to write to the file
+            //Using cleans up the resource so its not left in memory
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                //write a line to the file
+                writer.WriteLine(data1);
+                writer.WriteLine("Hello, World!");
+                writer.WriteLine("This is a sample text file.");
+                writer.WriteLine("StreamWriter makes it easy to write text to files.");
+            }
+            //make a message show in the listbox
+            lbxLoop.Items.Add("Text written to file successfully.");
+        }
+
+        private void btnAppendtext_Click(object sender, EventArgs e)
+        {
+            StreamWriter appendText;
+            appendText = File.AppendText("file.txt");
+            //write a line to the file
+            appendText.WriteLine("Lets add this text");
+            appendText.WriteLine("New high Score = 500");
+            appendText.Close();
+
+            //make a message show in the listbox
+            lbxLoop.Items.Add("Text appended to file successfully.");
         }
     }
 }
