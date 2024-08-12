@@ -7,7 +7,6 @@ namespace Lecture5LoopsEtc
     public partial class Form1 : Form
     {
 
-        int data2 = 0;
 
         public Form1()
         {
@@ -16,6 +15,10 @@ namespace Lecture5LoopsEtc
 
         private void btnWhileLoop_Click(object sender, EventArgs e)
         {
+
+            const string someText = "you can never change this text";
+            // someText = "I'll try anyway";
+
             //get the data from the text box using in.tryParse
             int data1 = 0;
             int.TryParse(txtData1.Text, out data1);
