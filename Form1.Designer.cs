@@ -40,6 +40,10 @@
             btnForLoop = new Button();
             btnWritetofile = new Button();
             btnAppendtext = new Button();
+            btnReadTextFromFile = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
+            btnOpenFile = new Button();
             SuspendLayout();
             // 
             // btnWhileLoop
@@ -146,7 +150,7 @@
             // 
             // btnAppendtext
             // 
-            btnAppendtext.Location = new Point(549, 124);
+            btnAppendtext.Location = new Point(549, 118);
             btnAppendtext.Name = "btnAppendtext";
             btnAppendtext.Size = new Size(98, 45);
             btnAppendtext.TabIndex = 12;
@@ -154,12 +158,38 @@
             btnAppendtext.UseVisualStyleBackColor = true;
             btnAppendtext.Click += btnAppendtext_Click;
             // 
+            // btnReadTextFromFile
+            // 
+            btnReadTextFromFile.Location = new Point(549, 184);
+            btnReadTextFromFile.Name = "btnReadTextFromFile";
+            btnReadTextFromFile.Size = new Size(98, 44);
+            btnReadTextFromFile.TabIndex = 13;
+            btnReadTextFromFile.Text = "Read Text";
+            btnReadTextFromFile.UseVisualStyleBackColor = true;
+            btnReadTextFromFile.Click += btnReadTextFromFile_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnOpenFile
+            // 
+            btnOpenFile.Location = new Point(549, 254);
+            btnOpenFile.Name = "btnOpenFile";
+            btnOpenFile.Size = new Size(96, 33);
+            btnOpenFile.TabIndex = 14;
+            btnOpenFile.Text = "Open File";
+            btnOpenFile.UseVisualStyleBackColor = true;
+            btnOpenFile.Click += btnOpenFile_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnOpenFile);
+            Controls.Add(btnReadTextFromFile);
             Controls.Add(btnAppendtext);
             Controls.Add(btnWritetofile);
             Controls.Add(btnForLoop);
@@ -192,5 +222,9 @@
         private Button btnForLoop;
         private Button btnWritetofile;
         private Button btnAppendtext;
+        private Button btnReadTextFromFile;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
+        private Button btnOpenFile;
     }
 }

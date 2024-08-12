@@ -163,5 +163,63 @@ namespace Lecture5LoopsEtc
             //make a message show in the listbox
             lbxLoop.Items.Add("Text appended to file successfully.");
         }
+
+        private void btnReadTextFromFile_Click(object sender, EventArgs e)
+        {
+            string filePath = "file.txt";
+
+            // Create a StreamReader instance to read from the file
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                //make a variable to hold each line of text
+                string line;
+
+                //loop to read each line until there are no more lines (null)
+                while ((line = reader.ReadLine()) != null)
+                {
+                    //add it to the listbox line by line.
+                    lbxLoop.Items.Add(line);
+                }
+            }
+        }
+
+        private void btnOpenFile_Click(object sender, EventArgs e)
+        {
+            //  openFileDialog1.ShowDialog(this);
+
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {//you can specify your initial directory, - this is to my debug folder.
+                InitialDirectory = "C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
+                //lets filter to only see text files.
+                Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
+                FilterIndex = 1,
+                RestoreDirectory = true
+            };
+
+
+            //if you click OK in the dialog box
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Get the path of the selected file
+                string filePath = openFileDialog.FileName;
+
+                // Read the contents of the file into a stream
+                var fileStream = openFileDialog.OpenFile();
+
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+
+                    //make a variable to hold each line of text
+                    string line;
+
+                    // loop to read each line until there are no more lines(null)
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        //add it to the listbox line by line.
+                        lbxLoop.Items.Add(line);
+                    }
+                }
+            }
+        }
     }
 }
