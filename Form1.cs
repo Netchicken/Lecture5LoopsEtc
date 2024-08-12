@@ -185,10 +185,9 @@ namespace Lecture5LoopsEtc
 
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
-            //  openFileDialog1.ShowDialog(this);
-
             OpenFileDialog openFileDialog = new OpenFileDialog
-            {//you can specify your initial directory, - this is to my debug folder.
+            {
+                //you can specify your initial directory, - this is to my debug folder.
                 InitialDirectory = "C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
                 //lets filter to only see text files.
                 Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
@@ -218,6 +217,33 @@ namespace Lecture5LoopsEtc
                         //add it to the listbox line by line.
                         lbxLoop.Items.Add(line);
                     }
+                }
+            }
+        }
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                //you can specify your initial directory, - this is to my debug folder.
+                InitialDirectory = "C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
+                Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
+                FilterIndex = 1,
+                RestoreDirectory = true,
+                Title = "Save a Text File"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Get the path of the file to save
+                string filePath = saveFileDialog.FileName;
+
+                // Write some text to the file
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    writer.WriteLine("Hello, World!");
+                    writer.WriteLine("This is a sample text file.");
+                    writer.WriteLine("SaveFileDialog makes it easy to save files.");
                 }
             }
         }

@@ -44,6 +44,7 @@
             openFileDialog1 = new OpenFileDialog();
             saveFileDialog1 = new SaveFileDialog();
             btnOpenFile = new Button();
+            btnSaveFile = new Button();
             SuspendLayout();
             // 
             // btnWhileLoop
@@ -182,12 +183,23 @@
             btnOpenFile.UseVisualStyleBackColor = true;
             btnOpenFile.Click += btnOpenFile_Click;
             // 
+            // btnSaveFile
+            // 
+            btnSaveFile.Location = new Point(556, 315);
+            btnSaveFile.Name = "btnSaveFile";
+            btnSaveFile.Size = new Size(81, 25);
+            btnSaveFile.TabIndex = 15;
+            btnSaveFile.Text = "Save File";
+            btnSaveFile.UseVisualStyleBackColor = true;
+            btnSaveFile.Click += btnSaveFile_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSaveFile);
             Controls.Add(btnOpenFile);
             Controls.Add(btnReadTextFromFile);
             Controls.Add(btnAppendtext);
@@ -226,5 +238,6 @@
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
         private Button btnOpenFile;
+        private Button btnSaveFile;
     }
 }
