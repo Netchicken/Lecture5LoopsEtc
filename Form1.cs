@@ -188,15 +188,16 @@ namespace Lecture5LoopsEtc
 
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
+            #region OpenDialog
+            //create an instance of the OFD
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 //you can specify your initial directory, - this is to my debug folder.
                 InitialDirectory = @"C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
                 //lets filter to only see text files.
                 Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
-                FilterIndex = 1,
-                RestoreDirectory = true
             };
+            #endregion
 
 
             //if you click OK in the dialog box
@@ -210,7 +211,6 @@ namespace Lecture5LoopsEtc
 
                 using (StreamReader reader = new StreamReader(fileStream))
                 {
-
                     //make a variable to hold each line of text
                     string line;
 
@@ -231,8 +231,6 @@ namespace Lecture5LoopsEtc
                 //you can specify your initial directory, - this is to my debug folder.
                 InitialDirectory = @"C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
                 Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
-                FilterIndex = 1,
-                RestoreDirectory = true,
                 Title = "Save a Text File"
             };
 
