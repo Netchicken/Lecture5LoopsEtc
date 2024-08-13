@@ -191,7 +191,7 @@ namespace Lecture5LoopsEtc
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 //you can specify your initial directory, - this is to my debug folder.
-                InitialDirectory = "C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
+                InitialDirectory = @"C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
                 //lets filter to only see text files.
                 Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
                 FilterIndex = 1,
@@ -229,7 +229,7 @@ namespace Lecture5LoopsEtc
             SaveFileDialog saveFileDialog = new SaveFileDialog
             {
                 //you can specify your initial directory, - this is to my debug folder.
-                InitialDirectory = "C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
+                InitialDirectory = @"C:\\Users\\intel\\source\\repos\\Lecture5LoopsEtc\\bin\\Debug\\net8.0-windows\\",
                 Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
                 FilterIndex = 1,
                 RestoreDirectory = true,
