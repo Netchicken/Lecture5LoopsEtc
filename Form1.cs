@@ -248,5 +248,34 @@ namespace Lecture5LoopsEtc
                 }
             }
         }
+
+        private void btnForEach_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+
+            // list.Add("Monday");
+
+            string bookedDay = "Wednesday";
+
+            list.AddRange(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]);
+
+            foreach (string day in list)
+            {
+
+
+                if (day == bookedDay)
+                {
+                    lbxLoop.Items.Add(day + "  <-- Booked");
+                }
+                else
+                {
+                    lbxLoop.Items.Add(day);
+
+                }
+
+
+            }
+
+        }
     }
 }

@@ -45,13 +45,15 @@
             saveFileDialog1 = new SaveFileDialog();
             btnOpenFile = new Button();
             btnSaveFile = new Button();
+            btnForEach = new Button();
             SuspendLayout();
             // 
             // btnWhileLoop
             // 
-            btnWhileLoop.Location = new Point(13, 43);
+            btnWhileLoop.Location = new Point(19, 72);
+            btnWhileLoop.Margin = new Padding(4, 5, 4, 5);
             btnWhileLoop.Name = "btnWhileLoop";
-            btnWhileLoop.Size = new Size(75, 23);
+            btnWhileLoop.Size = new Size(107, 38);
             btnWhileLoop.TabIndex = 0;
             btnWhileLoop.Text = "While Loop";
             btnWhileLoop.UseVisualStyleBackColor = true;
@@ -59,51 +61,57 @@
             // 
             // txtData1
             // 
-            txtData1.Location = new Point(118, 24);
+            txtData1.Location = new Point(169, 40);
+            txtData1.Margin = new Padding(4, 5, 4, 5);
             txtData1.Name = "txtData1";
-            txtData1.Size = new Size(100, 23);
+            txtData1.Size = new Size(141, 31);
             txtData1.TabIndex = 1;
             // 
             // txtData2
             // 
-            txtData2.Location = new Point(224, 23);
+            txtData2.Location = new Point(320, 38);
+            txtData2.Margin = new Padding(4, 5, 4, 5);
             txtData2.Name = "txtData2";
-            txtData2.Size = new Size(100, 23);
+            txtData2.Size = new Size(141, 31);
             txtData2.TabIndex = 2;
             // 
             // lbxLoop
             // 
             lbxLoop.FormattingEnabled = true;
-            lbxLoop.ItemHeight = 15;
-            lbxLoop.Location = new Point(118, 53);
+            lbxLoop.ItemHeight = 25;
+            lbxLoop.Location = new Point(169, 88);
+            lbxLoop.Margin = new Padding(4, 5, 4, 5);
             lbxLoop.Name = "lbxLoop";
-            lbxLoop.Size = new Size(396, 379);
+            lbxLoop.Size = new Size(564, 629);
             lbxLoop.TabIndex = 4;
             lbxLoop.SelectedIndexChanged += lbxLoop_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(118, 6);
+            label1.Location = new Point(169, 10);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(40, 15);
+            label1.Size = new Size(64, 25);
             label1.TabIndex = 5;
             label1.Text = "Data 1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(224, 5);
+            label2.Location = new Point(320, 8);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(64, 25);
             label2.TabIndex = 6;
             label2.Text = "Data 2";
             // 
             // btnDoWhile
             // 
-            btnDoWhile.Location = new Point(12, 72);
+            btnDoWhile.Location = new Point(17, 120);
+            btnDoWhile.Margin = new Padding(4, 5, 4, 5);
             btnDoWhile.Name = "btnDoWhile";
-            btnDoWhile.Size = new Size(76, 41);
+            btnDoWhile.Size = new Size(109, 68);
             btnDoWhile.TabIndex = 7;
             btnDoWhile.Text = "Do While Loop";
             btnDoWhile.UseVisualStyleBackColor = true;
@@ -111,9 +119,10 @@
             // 
             // btnRandom
             // 
-            btnRandom.Location = new Point(13, 128);
+            btnRandom.Location = new Point(19, 213);
+            btnRandom.Margin = new Padding(4, 5, 4, 5);
             btnRandom.Name = "btnRandom";
-            btnRandom.Size = new Size(75, 61);
+            btnRandom.Size = new Size(107, 102);
             btnRandom.TabIndex = 8;
             btnRandom.Text = "While Random Number";
             btnRandom.UseVisualStyleBackColor = true;
@@ -121,9 +130,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 195);
+            button1.Location = new Point(17, 325);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(75, 68);
+            button1.Size = new Size(107, 113);
             button1.TabIndex = 9;
             button1.Text = "Do Random Number";
             button1.UseVisualStyleBackColor = true;
@@ -131,9 +141,10 @@
             // 
             // btnForLoop
             // 
-            btnForLoop.Location = new Point(13, 269);
+            btnForLoop.Location = new Point(19, 448);
+            btnForLoop.Margin = new Padding(4, 5, 4, 5);
             btnForLoop.Name = "btnForLoop";
-            btnForLoop.Size = new Size(74, 48);
+            btnForLoop.Size = new Size(106, 80);
             btnForLoop.TabIndex = 10;
             btnForLoop.Text = "For Loop";
             btnForLoop.UseVisualStyleBackColor = true;
@@ -141,9 +152,10 @@
             // 
             // btnWritetofile
             // 
-            btnWritetofile.Location = new Point(549, 53);
+            btnWritetofile.Location = new Point(784, 88);
+            btnWritetofile.Margin = new Padding(4, 5, 4, 5);
             btnWritetofile.Name = "btnWritetofile";
-            btnWritetofile.Size = new Size(96, 48);
+            btnWritetofile.Size = new Size(137, 80);
             btnWritetofile.TabIndex = 11;
             btnWritetofile.Text = "Write to File";
             btnWritetofile.UseVisualStyleBackColor = true;
@@ -151,9 +163,10 @@
             // 
             // btnAppendtext
             // 
-            btnAppendtext.Location = new Point(549, 118);
+            btnAppendtext.Location = new Point(784, 197);
+            btnAppendtext.Margin = new Padding(4, 5, 4, 5);
             btnAppendtext.Name = "btnAppendtext";
-            btnAppendtext.Size = new Size(98, 45);
+            btnAppendtext.Size = new Size(140, 75);
             btnAppendtext.TabIndex = 12;
             btnAppendtext.Text = "Add text to file";
             btnAppendtext.UseVisualStyleBackColor = true;
@@ -161,9 +174,10 @@
             // 
             // btnReadTextFromFile
             // 
-            btnReadTextFromFile.Location = new Point(549, 184);
+            btnReadTextFromFile.Location = new Point(784, 307);
+            btnReadTextFromFile.Margin = new Padding(4, 5, 4, 5);
             btnReadTextFromFile.Name = "btnReadTextFromFile";
-            btnReadTextFromFile.Size = new Size(98, 44);
+            btnReadTextFromFile.Size = new Size(140, 73);
             btnReadTextFromFile.TabIndex = 13;
             btnReadTextFromFile.Text = "Read Text";
             btnReadTextFromFile.UseVisualStyleBackColor = true;
@@ -175,9 +189,10 @@
             // 
             // btnOpenFile
             // 
-            btnOpenFile.Location = new Point(549, 254);
+            btnOpenFile.Location = new Point(784, 423);
+            btnOpenFile.Margin = new Padding(4, 5, 4, 5);
             btnOpenFile.Name = "btnOpenFile";
-            btnOpenFile.Size = new Size(96, 33);
+            btnOpenFile.Size = new Size(137, 55);
             btnOpenFile.TabIndex = 14;
             btnOpenFile.Text = "Open File";
             btnOpenFile.UseVisualStyleBackColor = true;
@@ -185,20 +200,32 @@
             // 
             // btnSaveFile
             // 
-            btnSaveFile.Location = new Point(556, 315);
+            btnSaveFile.Location = new Point(794, 525);
+            btnSaveFile.Margin = new Padding(4, 5, 4, 5);
             btnSaveFile.Name = "btnSaveFile";
-            btnSaveFile.Size = new Size(81, 25);
+            btnSaveFile.Size = new Size(116, 42);
             btnSaveFile.TabIndex = 15;
             btnSaveFile.Text = "Save File";
             btnSaveFile.UseVisualStyleBackColor = true;
             btnSaveFile.Click += btnSaveFile_Click;
             // 
+            // btnForEach
+            // 
+            btnForEach.Location = new Point(17, 551);
+            btnForEach.Name = "btnForEach";
+            btnForEach.Size = new Size(107, 80);
+            btnForEach.TabIndex = 16;
+            btnForEach.Text = "For Each loop";
+            btnForEach.UseVisualStyleBackColor = true;
+            btnForEach.Click += btnForEach_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
+            Controls.Add(btnForEach);
             Controls.Add(btnSaveFile);
             Controls.Add(btnOpenFile);
             Controls.Add(btnReadTextFromFile);
@@ -214,6 +241,7 @@
             Controls.Add(txtData2);
             Controls.Add(txtData1);
             Controls.Add(btnWhileLoop);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -239,5 +267,6 @@
         private SaveFileDialog saveFileDialog1;
         private Button btnOpenFile;
         private Button btnSaveFile;
+        private Button btnForEach;
     }
 }
